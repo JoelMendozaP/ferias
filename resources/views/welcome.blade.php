@@ -57,20 +57,7 @@
                           <H1>ES <strong>GENIAL</strong> QUE NOS VISITES</H1>
                           <h5 class="">Bienvenido/a a nuestra página web nuestro hogar en el mundo digital.</h5>
                           <h5 class="">Aqui puedes informarte de ferias celebradas en la ciudad de La Paz y El Alto</h5>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
+                          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                       </div>
                     <div class="col-sm-2"></div>
                   </div>
