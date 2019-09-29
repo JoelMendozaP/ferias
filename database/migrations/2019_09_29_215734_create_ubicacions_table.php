@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFeriasTable extends Migration
+class CreateUbicacionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateFeriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ferias', function (Blueprint $table) {
+        Schema::create('ubicacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->integer('nroStad');
-            $table->text('descripcion');
-            $table->text('objetivo');
-            $table->integer('telefono');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ class CreateFeriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ferias');
+        Schema::dropIfExists('ubicacions');
     }
 }

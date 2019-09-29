@@ -180,3 +180,6 @@
 @endsection
 
 
+<!-- git add . -->
+<!-- git comit -m "mensaje" -->
+<!-- git push -->
