@@ -13,33 +13,54 @@
                               <hr>
                               <!-- formulario -->
                                 <!-- Extended material form grid -->
-                                    <form>
+                                    <form action="{{route('ferias.crear')}}" method="POST">
+                                        @csrf
+
+                                        @error('nombre')
+                                            <div class="alert alert-danger">
+                                                El nombre es obligatorio
+                                            </div>
+                                        @enderror
                                         <!-- Grid row -->
                                         <div class="form-row">
 
                                             <div class="col-md-12">
                                                         <!-- Material input -->
                                                         <div class="md-form form-group">
-                                                        <input type="text" class="form-control" id="inputAddress2MD">
-                                                        <label for="inputAddress2MD">Nombre de la feria</label>
+                                                        <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}">
+                                                        <label>Nombre de la feria</label>
                                                         </div>
                                                     </div>    
                                         <!-- Grid column -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="date" class="form-control" id="inputEmail4MD">
-                                            <label for="inputEmail4MD">Fecha de Inicio</label>
+                                            <input type="date" class="form-control" name="fechaInicio" value="{{ old('fechaInicio') }}">
+                                            <label>Fecha de Inicio</label>
                                             </div>
                                         </div>
                                         <!-- Grid column -->
                                     
                                         <!-- Grid column -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="date" class="form-control" id="inputPassword4MD">
+                                            <input type="date" class="form-control" name="fechaFin" value="{{ old('fechaFin') }}">
                                             <label for="inputPassword4MD">Fecha de Fin</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <!-- Material input -->
+                                            <div class="md-form form-group">
+                                            <input type="time" value="08:00" class="form-control" name="HraInicio" value="{{ old('HraInicio') }}">
+                                            <label for="inputPassword4MD">Hora Inicio</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <!-- Material input -->
+                                            <div class="md-form form-group">
+                                            <input type="time" value="18:00" class="form-control" name="HraFin" value="{{ old('HraFin') }}">
+                                            <label for="inputPassword4MD">Hora de Fin</label>
                                             </div>
                                         </div>
                                         <!-- Grid column -->
@@ -52,21 +73,21 @@
                                         <div class="col-md-4">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputAddressMD">
+                                            <input type="text" class="form-control" name="Ciudad" value="{{ old('Ciudad') }}">
                                             <label for="inputAddressMD">Ciudad</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputAddressMD">
+                                            <input type="text" class="form-control" name="Localidad" value="{{ old('Localidad') }}">
                                             <label for="inputAddressMD">Localidad</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputAddressMD">
+                                            <input type="text" class="form-control" name="Calle" value="{{ old('Calle') }}">
                                             <label for="inputAddressMD">Calle o Av.</label>
                                             </div>
                                         </div>
@@ -78,7 +99,7 @@
                                         <div class="col-md-12">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputAddress2MD">
+                                            <input type="text" class="form-control" name="descripcion" value="{{ old('descripcion') }}">
                                             <label for="inputAddress2MD">Descripcion de la feria</label>
                                             </div>
                                         </div>
@@ -86,7 +107,7 @@
                                         <div class="col-md-12">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputAddress2MD">
+                                            <input type="text" class="form-control" name="objetivo" value="{{ old('objetivo') }}">
                                             <label for="inputAddress2MD">Objetivo</label>
                                             </div>
                                         </div>
@@ -100,7 +121,7 @@
                                         <div class="col-md-6">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="number" class="form-control" id="inputCityMD">
+                                            <input type="number" class="form-control" name="nroStad" value="{{ old('nroStad') }}">
                                             <label for="inputCityMD">Cantidad de Stands</label>
                                             </div>
                                         </div>
@@ -110,7 +131,7 @@
                                         <div class="col-md-6">
                                             <!-- Material input -->
                                             <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputZipMD">
+                                            <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}">
                                             <label for="inputZipMD">Numero de Referencia</label>
                                             </div>
                                         </div>

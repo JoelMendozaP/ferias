@@ -20,6 +20,7 @@ class CreateFeriasTable extends Migration
             $table->text('descripcion');
             $table->text('objetivo');
             $table->integer('telefono');
+            $table->string('usuario');
             $table->timestamps();
         });
     }

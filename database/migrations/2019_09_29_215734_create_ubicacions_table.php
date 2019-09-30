@@ -15,6 +15,9 @@ class CreateUbicacionsTable extends Migration
     {
         Schema::create('ubicacions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('Ciudad');
+            $table->string('Localidad');
+            $table->string('Calle');
             $table->timestamps();
         });
     }
