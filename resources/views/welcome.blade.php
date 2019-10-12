@@ -66,4 +66,5 @@
           <div class="wave">
     	</div>
       </section>
+      
 @endsection

@@ -46,4 +46,11 @@ class HomeController extends Controller
         return back();
         //return view('/');
     }
+    public function agregar(Request $request)
+    {
+        return $request->all();
+        
+        
+        //return view('/');
+    }
 }

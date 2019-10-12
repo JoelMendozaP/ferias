@@ -145,48 +145,40 @@
                                         </div>
                                         <div class="col-md-6 text-right ">
                                             <br> 
-                                            <a href="#ventana1" class="btn-floating btn-lg btn-default" data-toggle="modal"> <i class="fas fa-map-marked-alt"></i></a>
-                                            
-                                                <!-- Central Modal Medium Success -->
-                                                <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                                                aria-hidden="true">
-                                                <div class="modal-dialog modal-notify modal-success" role="document">
-                                                <!--Content-->
-                                                <div class="modal-content ">
-                                                    <!--Header-->
-                                                    <div class="modal-header  orange">
-                                                    <p class="heading lead ">Agregar Ubicacion con Google Map</p>
+                                            <a class="btn-floating btn-lg btn-default" data-toggle="modal" data-target=".bd-example-modal-lg "> <i class="fas fa-map-marked-alt"></i></a>
+                                            <!-- Central Modal Medium Danger -->
+                                            <div class="modal fade bd-example-modal-lg" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-notify modal-danger" role="document">
+                                            <!--Content-->
+                                            <div class="modal-content">
+                                                <!--Header-->
+                                                <div class="modal-header">
+                                                <p class="heading lead">Agregar Ubicacion</p>
 
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true" class="white-text">&times;</span>
-                                                    </button>
-                                                    </div>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true" class="white-text">&times;</span>
+                                                </button>
+                                                </div>
 
-                                                    <!--Body-->
-                                                    <div class="modal-body">
-                                                    <div class="text-center">
-                                                        <!--Google map-->
-                                                         <div id="map-container-google-2" class="z-depth-1-half map-container">
-                                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.4410825319055!2d-68.13180778487465!3d-16.503815088613777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f206517d882d1%3A0x7efa3457461b1e6a!2sCarrera%20de%20Inform%C3%A1tica%20-%20UMSA!5e0!3m2!1ses-419!2sus!4v1568908953374!5m2!1ses-419!2sus" 
-                                                                width="400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                                        </div>
-                                                        
-                                                        <!--Google Maps-->
-                                                    </div>
-                                                    </div>
-
-                                                    <!--Footer-->
+                                                <!--Body-->
+                                                <div class="modal-body"  id="map" style="width: 100%; height: 500px">
+                                                
+                                                </div>
+                                                
+                                                <!--Footer-->
+                                                <form action="{{route('ferias.agregar')}}" method="POST">
+                                                    @csrf
+                                                    <input type="text" id="lat" name="lat" /> 
+                                                    <input type="text" id="lng" name="lng" />
                                                     <div class="modal-footer justify-content-center">
-                                                    <a type="button" class="btn btn-orange">Guardar Ubicacion</a>
-                                                    <a type="button" class="btn btn-outline-orange waves-effect" data-dismiss="modal">Cancelar</a>
-                                                    </div>
-                                                </div>
-                                                <!--/.Content-->
-                                                </div>
-                                                </div>
+
+                                                    <button type="submit" class="btn btn-danger btn-block  my-4">Registrar</button>
+                                                </form>
                                                 
-                                                
+                                                </div>
                                             </div>
+                                        </div>
                                         </div>
                                     </form>
                                   <!-- Extended material form grid -->  
@@ -200,7 +192,7 @@
 <br><br><br><br><br><br><br>
 @endsection
 
-
+<!-- Central Modal Medium Danger-->
 <!-- git add . -->
 <!-- git comit -m "mensaje" -->
-<!-- git push -->
+<!-- git push -->           
