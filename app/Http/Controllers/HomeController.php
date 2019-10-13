@@ -26,31 +26,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function crear(Request $request)
-    {
-        //return $request->all();
-        $request->validate([
-            'nombre' => 'required',
-            'nroStad' => 'required',
-            'descripcion' => 'required',
-            'objetivo' => 'required',
-            'telefono' => 'required'
-        ]);
-        $feriaNueva = new App\Feria;
-        $feriaNueva->nombre = $request->nombre;
-        $feriaNueva->nroStad = $request->nroStad;
-        $feriaNueva->descripcion = $request->descripcion;
-        $feriaNueva->objetivo = $request->objetivo;
-        $feriaNueva->telefono = $request->telefono;
-        $feriaNueva->save();
-        return back();
-        //return view('/');
-    }
-    public function agregar(Request $request)
-    {
-        return $request->all();
-        
-        
-        //return view('/');
-    }
 }

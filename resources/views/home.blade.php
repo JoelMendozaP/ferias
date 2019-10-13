@@ -13,7 +13,7 @@
                               <hr>
                               <!-- formulario -->
                                 <!-- Extended material form grid -->
-                                    <form action="{{route('ferias.crear')}}" method="POST">
+                                    <form action="" method="POST">
                                         @csrf
 
                                         @error('nombre')
@@ -167,7 +167,7 @@
                                                 </div>
                                                 
                                                 <!--Footer-->
-                                                <form action="{{route('ferias.agregar')}}" method="POST">
+                                                <form action="" method="POST">
                                                     @csrf
                                                     <input type="text" id="lat" name="lat" /> 
                                                     <input type="text" id="lng" name="lng" />
@@ -194,5 +194,5 @@
 
 <!-- Central Modal Medium Danger-->
 <!-- git add . -->
-<!-- git comit -m "mensaje" -->
+<!-- git commit -m "mensaje" -->
 <!-- git push -->           

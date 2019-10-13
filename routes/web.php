@@ -19,7 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post("/crear", 'HomeController@crear')->name('ferias.crear');
-Route::post("/crear/agregar", 'HomeController@agregar')->name('ferias.agregar');
-
-
+Route::resourse('ferias','FeriaController');
